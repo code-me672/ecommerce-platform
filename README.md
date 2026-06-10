@@ -10,11 +10,6 @@ Open-source single-store shop built with Next.js and Express. Includes auth, cat
 
 ![Storefront homepage](assets/screenshots/homepage.png)
 
-## Demo video
-
-[![Watch the full-stack walkthrough on YouTube](https://img.youtube.com/vi/qJDXcQ_sxSI/maxresdefault.jpg)](https://www.youtube.com/watch?v=qJDXcQ_sxSI)
-
-**[▶ Watch on YouTube](https://www.youtube.com/watch?v=qJDXcQ_sxSI)** — local Docker setup, storefront, cart, Stripe checkout, admin dashboard, and chat. Some screens may differ slightly from the current codebase.
 
 ## Screenshots
 
