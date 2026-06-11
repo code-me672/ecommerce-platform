@@ -1,9 +1,13 @@
 # Full-Stack E-Commerce Platform
 
 Open-source single-store shop built with Next.js and Express. Includes auth, catalog, cart, Stripe checkout, orders, admin analytics, and real-time chat.
+# Full-Stack E-Commerce Platform
 
+Open-source single-store shop built with Next.js and Express. Includes auth, catalog, cart, Stripe checkout, orders, admin analytics, and real-time chat.
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+**[Local setup](#local-setup)** · [Repository](https://github.com/kabitacodeforge/ecommerce-platform)
 
 ![Storefront homepage](assets/screenshots/homepage.png)
 
