@@ -11,6 +11,7 @@ import {
 
 export default function configurePassport() {
   // Google Strategy (unchanged)
+  if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
   passport.use(
     new GoogleStrategy(
       {
@@ -69,8 +70,12 @@ export default function configurePassport() {
       }
     )
   );
+  } else {
+    console.warn("⚠️ Google OAuth disabled: missing environment variables");
+  }
 
   // Facebook Strategy (unchanged, assuming it works)
+  if (process.env.FACEBOOK_APP_ID && process.env.FACEBOOK_APP_SECRET) {
   passport.use(
     new FacebookStrategy(
       {
@@ -131,8 +136,12 @@ export default function configurePassport() {
       }
     )
   );
+  } else {
+    console.warn("⚠️ Facebook OAuth disabled: missing environment variables");
+  }
 
   // Twitter Strategy (standalone, without oauthUtils)
+  if (process.env.TWITTER_CONSUMER_KEY && process.env.TWITTER_CONSUMER_SECRET) {
   passport.use(
     new TwitterStrategy(
       {
@@ -209,4 +218,7 @@ export default function configurePassport() {
       }
     )
   );
+  } else {
+    console.warn("⚠️ Twitter OAuth disabled: missing environment variables");
+  }
 }

@@ -29,9 +29,12 @@ const logger = winston.createLogger({
 });
 
 logger.exceptions.handle(
+  new winston.transports.Console(),
   new winston.transports.File({
     filename: path.join(__dirname, "../logs/exceptions.log"),
   })
 );
+
+logger.rejections.handle(new winston.transports.Console());
 
 export default logger;

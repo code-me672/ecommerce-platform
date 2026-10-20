@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: ecommerce-api
+    runtime: node
+    rootDir: src/server
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npx prisma migrate deploy && npm run start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 22
