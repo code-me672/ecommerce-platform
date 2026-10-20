@@ -1,10 +1,7 @@
 import { addAlias } from "module-alias";
-import path from "path";
 
-// Dynamically set module alias based on NODE_ENV
-const isProduction = process.env.NODE_ENV === "production";
-const projectRoot = path.resolve(__dirname, ".."); // Move up from src to project root
-const aliasPath = path.join(projectRoot, isProduction ? "dist" : "src");
+// server.ts lives in src/ (dev) or dist/ (compiled), so __dirname is the right "@" root
+const aliasPath = __dirname;
 
 addAlias("@", aliasPath);
 
